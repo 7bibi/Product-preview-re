@@ -193,29 +193,8 @@ img {
 
 @media (min-width: 1024px) {
     article.container {
-        height: 40vh;
-        width: 80vw;
-        overflow: auto;
-    }
-}
-
-@media (min-width: 1440px) {
-    article.container {
-        width: 50vw;
-        height: 65vh;
+        max-width: 44rem;
         overflow: hidden;
     }
-
-    h2.reduced-price {
-        font-size: 1.5em;
-    }
-
-    h1.perfume-name {
-        font-size: 2.2em;
-    }
-
-    p.perfume-description {
-        font-size: 1.2em;
-    }
-
 }
+
