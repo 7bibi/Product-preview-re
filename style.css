@@ -124,6 +124,11 @@ button.cart-button {
 button.cart-button:active {
     background-color: hsl(212, 21%, 14%);
 }
+
+button.cart-button:hover {
+    cursor: pointer;
+}
+
 span.add-text {
     color: white;
     font-family: var(--primary-text-font);
