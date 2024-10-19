@@ -1,0 +1,218 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*custom property names are case sensitive -- refer with var()*/
+
+:root {
+    --green-text-color: hsl(158, 36%, 37%);
+    --greyish-text-color: hsl(228, 12%, 48%);
+    --primary-text-font: "Montserrat", sans-serif; /* 700, 500 */
+    --secondary-text-font: "Fraunces", serif; /* Only 700*/
+}
+  
+
+
+
+.attribution { 
+    font-size: 11px;
+    text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+}
+
+article.container {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 90vw;
+    height: 90vh;
+    border-radius: .5em;
+    background-color: white;
+}
+
+
+div.second-col {
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+
+}
+
+p {
+    font-size: 14px;
+    font-family: var(--primary-text-font);
+    color: var(--greyish-text-color)
+}
+
+p.perfume-text {
+    margin-bottom: 3%;
+    letter-spacing: .5em;
+    font-size: calc(2.5vw + 1v) ;
+    
+}
+
+h1.perfume-name {
+    font-size: 2em;
+    font-family: var(--secondary-text-font);
+    margin-bottom: 5%;
+}
+
+p.perfume-description {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 6%;
+}
+
+div.price-tag {
+    display: flex;
+    gap: 5%;
+    margin-bottom: 6%;
+}
+
+h2.reduced-price {
+    font-family: var(--secondary-text-font);
+    color: var(--green-text-color);
+    font-size: 2em;
+}
+
+span.original-price {
+    align-self: center;
+    text-decoration-line: line-through;
+    font-family: var(--primary-text-font);
+    font-weight: 500;
+    color: var(--greyish-text-color);
+    font-size: clamp(.5em, .8em, 2em);
+}
+
+button.cart-button {
+    display: flex;
+    width: 100%;
+    border-radius: .5em;
+    border: none;
+    background-color: var(--green-text-color);
+    padding: 4%;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+button.cart-button:active {
+    background-color: hsl(212, 21%, 14%);
+}
+span.add-text {
+    color: white;
+    font-family: var(--primary-text-font);
+    font-weight: 700;
+}
+object{
+    width: 10%;
+    filter: invert(100%);
+
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+}
+
+
+@media (min-width: 760px) {
+ 
+    article.container {
+        flex-direction: row;
+        height: 50vh;
+        width: 90vw;
+        overflow: auto;
+        
+    }
+
+    div.second-col {
+        display: flex;
+        flex-basis: 50%;
+        padding: 4%;
+    }
+
+    div.first-col {
+        display: flex;
+        flex-basis: 50%;
+    
+    }
+
+    p.perfume-text {
+        font-size: 1em;
+        margin-bottom: 6%;
+    }
+
+    h1.perfume-name {
+        font-size: 2em;
+    }
+
+    p.perfume-description {
+        font-size: 1.3em;
+    }
+
+    div.price-tag {
+        font-size: 1.5em;
+        margin-bottom: 10%;
+
+    }
+
+    span.add-text {
+        font-size: clamp(1em ,1.2em, 1.7) ;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    article.container {
+        height: 40vh;
+        width: 80vw;
+        overflow: auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    article.container {
+        width: 50vw;
+        height: 65vh;
+        overflow: hidden;
+    }
+
+    h2.reduced-price {
+        font-size: 1.5em;
+    }
+
+    h1.perfume-name {
+        font-size: 2.2em;
+    }
+
+    p.perfume-description {
+        font-size: 1.2em;
+    }
+
+}
