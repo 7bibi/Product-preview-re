@@ -49,8 +49,7 @@ article.container {
     display: flex;
     flex-direction: column;
     overflow: auto;
-    width: 90vw;
-    height: 90vh;
+    max-width: 25rem;
     border-radius: .5em;
     background-color: white;
 }
@@ -150,8 +149,7 @@ img {
  
     article.container {
         flex-direction: row;
-        height: 50vh;
-        width: 90vw;
+        max-width: 90vw;
         overflow: auto;
         
     }
